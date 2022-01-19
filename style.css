@@ -13,6 +13,9 @@
 	border: none;
 	font-weight: bolder;
 }
+.againBtn:hover {
+	cursor: pointer;
+}
 
 .gameCondition {
 	display: inline;
@@ -63,9 +66,16 @@ input {
 	border: none;
 	background-color: white;
 }
+.checkBtn:hover {
+	cursor: pointer;
+}
 
 .results p {
 	line-height: 1.8em;
 	font-size: 1.3em;
 	width: 250px;
+}
+
+.message {
+	height: 76px;
 }

@@ -14,11 +14,13 @@ checkBtn.addEventListener('click', () => {
   if(!input){
     document.querySelector('.message').textContent = '⛔️ No number!'
   } else if (input === randomNumber){
-    document.querySelector('.message').textContent = '🥳 You have guessed it!'
+    document.querySelector('.message').textContent = '🎊 You have guessed it!'
     document.querySelector('.secretNumber').textContent = randomNumber
-    document.querySelector('.hint').textContent = ''
-  } else {
-    document.querySelector('.message').textContent = `You have guessed ${input}..`
+    document.querySelector('.hint').textContent = '🥳🎉🥳'
+  } else if (input > randomNumber){
+    document.querySelector('.hint').textContent = 'Hint:  📈 Too high..'
+  } else if (input < randomNumber){
+    document.querySelector('.hint').textContent = 'Hint: 📉 Too low..'
   }
 })
 
@@ -28,7 +30,7 @@ againBtn.addEventListener('click', () => {
   document.querySelector('.secretNumber').textContent = '?'
   document.querySelector('.inputValue').value = ''
   document.querySelector('.message').textContent = 'Start guessing...'
-  document.querySelector('.hint').textContent = 'Hint:'
+  document.querySelector('.hint').textContent = 'Hint: -'
 })
 
 console.log(randomNumber)
