@@ -7,6 +7,11 @@ body {
 	height: 100vh;
 }
 
+.container {
+	width: 80vw;
+	margin: 50px auto;
+}
+
 .againBtn {
 	margin: 24px;
 	padding: 8px 16px;
@@ -46,7 +51,7 @@ body {
 	display: flex;
 	margin-top: 56px;
 	color: white;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 input {
@@ -58,6 +63,10 @@ input {
 	color: white;
 	background-color: inherit;
 	padding-left: 15px;
+}
+
+.input {
+	margin-left: 60px;
 }
 
 .checkBtn {
