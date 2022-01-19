@@ -9,6 +9,7 @@ const createNumber = () => {
 const checkBtn = document.querySelector('.checkBtn')
 const againBtn = document.querySelector('.againBtn')
 let score = 20
+let hiscore = 0
 
 checkBtn.addEventListener('click', () => {
   const input = Number(document.querySelector('.inputValue').value)
@@ -18,9 +19,13 @@ checkBtn.addEventListener('click', () => {
     document.querySelector('.message').textContent = 'Hint: Between 1 - 20'
   } else if (input === randomNumber){
     document.querySelector('body').style.backgroundColor = '#60b347'
+    document.querySelector('.secretNumber').style.width = '200px'
     document.querySelector('.message').textContent = 'You have guessed it! 🥳🎉🥳'
     document.querySelector('.secretNumber').textContent = randomNumber
-    document.querySelector('.hiScore').textContent = document.querySelector('.score').textContent
+    hiscore = document.querySelector('.score').textContent
+    if (hiscore > document.querySelector('.hiScore').textContent){
+      document.querySelector('.hiScore').textContent = hiscore
+    }
   } else if (input > randomNumber){
       if (score > 1){
         document.querySelector('.message').textContent = 'Hint:  📈 Too high..'
@@ -49,7 +54,8 @@ againBtn.addEventListener('click', () => {
   document.querySelector('.inputValue').value = ''
   document.querySelector('.message').textContent = 'Start guessing...'
   document.querySelector('.score').textContent = 20
-  document.querySelector('body').style.backgroundColor = 'black'
+  document.querySelector('body').style.backgroundColor = '#222'
+      document.querySelector('.secretNumber').style.width = '100px'
   score = 20
 })
 
