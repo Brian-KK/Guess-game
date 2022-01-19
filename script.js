@@ -17,6 +17,7 @@ checkBtn.addEventListener('click', () => {
   } else if (input > 20 || input < 1){
     document.querySelector('.message').textContent = 'Hint: Between 1 - 20'
   } else if (input === randomNumber){
+    document.querySelector('body').style.backgroundColor = '#60b347'
     document.querySelector('.message').textContent = 'You have guessed it! 🥳🎉🥳'
     document.querySelector('.secretNumber').textContent = randomNumber
     document.querySelector('.hiScore').textContent = document.querySelector('.score').textContent
@@ -48,6 +49,7 @@ againBtn.addEventListener('click', () => {
   document.querySelector('.inputValue').value = ''
   document.querySelector('.message').textContent = 'Start guessing...'
   document.querySelector('.score').textContent = 20
+  document.querySelector('body').style.backgroundColor = 'black'
   score = 20
 })
 
