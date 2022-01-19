@@ -4,6 +4,7 @@ body {
 	box-sizing: border-box;
 	background-color: #222;
 	font-family: 'Roboto Mono', monospace;
+	height: 100vh;
 }
 
 .againBtn {
